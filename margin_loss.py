@@ -231,7 +231,7 @@ def train(model, NUM_EPOCHS, optimizer, DEVICE, train_loader, valid_loader, test
     return best_val
 
 
-def eval(model, data_loader, path):
+'''def eval(model, data_loader, path):
     
     model.load_state_dict(torch.load(os.path.join('./', path), map_location=DEVICE)) 
     model.eval()
@@ -287,7 +287,7 @@ if __name__ == '__main__':
                 optimizer = torch.optim.SGD(model.parameters(), lr=lr, weight_decay=weight_decay) #, momentum=0.9)
             else:
                 optimizer = torch.optim.Adam(model.parameters(), lr=lr, weight_decay=weight_decay)
-            train(model, config.base_epochs, optimizer, DEVICE, train_loader, valid_loader, test_loader, args)
+            train(model, config.base_epochs, optimizer, DEVICE, train_loader, valid_loader, test_loader, args)'''
         
     elif args.clustering:
         # Calculate cluster NMIs
